@@ -1,0 +1,107 @@
+Problem Statement #10 — Document Intelligence for Legal Contracts
+
+1. Problem Statement
+
+Build an AI Agent for lawyers that analyzes legal PDF/DOCX documents and provides:
+
+Key clause summaries
+
+Clause extraction — termination, confidentiality, penalties, governing law, liability, etc.
+
+Question answering
+
+Source/page-based evidence
+
+No hallucination when information is not present
+
+
+The goal is to make legal contract analysis faster and easier. 
+
+2. Abstract
+
+An AI-powered Legal Contract Assistant that uses RAG to analyze lengthy contracts. It retrieves relevant clauses from the document and uses a local LLM to answer lawyer queries, summarize contracts, and extract important clauses. Answers are grounded in the uploaded document with source pages, and the system states when information cannot be found. It runs locally for better document privacy.
+
+3. Dataset
+
+Hackathon dataset: Master_Enterprise_Service_Agreement.pdf
+
+Contains clauses related to:
+
+Subscription & payment
+
+Term & termination
+
+Confidentiality
+
+Liability
+
+Indemnification
+
+Governing law
+
+SLA
+
+
+For development: We can use an anonymized IT/SaaS agreement, MSA, or NDA until we get the provided dataset. 
+
+4. Tech Stack
+
+Python 3.11
+
+Anaconda
+
+Jupyter/Spyder
+
+PyPDF
+
+Ollama
+
+Llama 3.2
+
+nomic-embed-text
+
+NumPy + cosine similarity
+
+pandas
+
+
+Fully offline — no cloud API required. 
+
+5. Implementation Steps
+
+1. Setup
+Install Python/Anaconda, Ollama, Llama 3.2, nomic-embed-text and required Python libraries.
+
+2. Document Processing
+Upload PDF/DOCX → extract text → preserve page numbers → split into chunks.
+
+3. RAG
+Generate embeddings → retrieve relevant chunks using cosine similarity.
+
+4. AI Agent
+Send retrieved clauses to Llama 3.2 → generate a grounded answer.
+
+5. Legal Features
+
+Contract Q&A
+
+Clause extraction
+
+Contract summary
+
+Risk/attention points
+
+Source/page evidence
+
+“Not found” protection
+
+
+6. Agentic Workflow
+
+Lawyer → Legal Agent → Understand request → Retrieve/Extract/Summarize → Verify → Answer + Evidence
+
+7. Testing
+Test questions on payment, termination, SLA, liability, indemnification, confidentiality, governing law, and hallucination traps. 
+
+Final Goal:
+One specialized Legal Contract AI Agent that acts as an assistant to lawyers.

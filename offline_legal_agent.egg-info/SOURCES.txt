@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+legal_agent/__init__.py
+legal_agent/agent.py
+legal_agent/config.py
+legal_agent/documents.py
+legal_agent/ollama_client.py
+legal_agent/retrieval.py
+offline_legal_agent.egg-info/PKG-INFO
+offline_legal_agent.egg-info/SOURCES.txt
+offline_legal_agent.egg-info/dependency_links.txt
+offline_legal_agent.egg-info/requires.txt
+offline_legal_agent.egg-info/top_level.txt
+tests/test_agent.py
+tests/test_documents.py

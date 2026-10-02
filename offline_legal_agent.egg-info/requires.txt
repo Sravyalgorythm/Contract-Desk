@@ -1,0 +1,10 @@
+numpy>=2.3
+pandas>=2.3
+pypdf>=6.0
+python-docx>=1.2
+python-dotenv>=1.1
+requests>=2.32
+streamlit>=1.48
+
+[dev]
+pytest>=8.4
